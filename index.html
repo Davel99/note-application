@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas online</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="icon" href="./assets/note.svg">
+    <link rel="stylesheet" href="./css/base.css">
+</head>
+
+<body>
+
+    <header class="w-100 bg-primary">
+        <nav class="w-100">
+            <div class="row">
+                <div class="col text-center text-white p-1">
+                    <b>NOTAPP</b>
+                </div>
+
+                <div class="col text-right text-white mr-3">
+                    Type what you want <img src="./assets/note.svg" alt="" width="20" height="20">
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main class="w-100 bg-light pt-3 pb-3">
+        <div class="row">
+            <div class="col">
+                <div class="container p-3">
+
+                    <b>Crea tus notas</b>
+                    <br>
+                    <sub>Oprime el botón amarillo al lado de cada nota para editar</sub>
+                    <hr>
+
+                    <div class="form group">
+                        <form action="" id="note-submit">
+                            <input type="text" required name="title" id="title" class="form-control"
+                                placeholder="Título de tu nota">
+
+                            <textarea required name="description" id="description" class="form-control" cols="30"
+                                rows="5" placeholder="Contenido de tu nota"></textarea>
+
+                            <button type="subtmit" id="principal-btn" class="btn btn-danger btn-block">Agregar
+                                nota</button>
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <div class="container p-3">
+                    <b>Aquí aparecen las notas que guardaste en tu navegador</b>
+                    <br>
+                    <sub>Estas notas son permantes y estarán presentes cada vez que accedas a esta página. Guárdalas con el botón azul al lado de cada nota</sub>
+                    <hr>
+                    <div id="notes_storage" class="bg-secondary p-3">
+
+                    </div>
+                </div>
+
+
+                <div class="container p-3">
+                    <b>Aquí aparecen tus notas <u>temporales</u></b>
+                    <br>
+                    <sub>Estas notas son temporales y desaparecerán cuando cierres la ventana. Conviértelas en permanentes con el botón azul a su costado.</sub>
+                    <hr>
+                    <div id="notes">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer class="footer w-100 bg-primary">
+        <div class="w-100 text-center text-white">
+            Joel David Gómez Ortega &copy; <span id="year"></span>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+    <script src="./js/storageController.js"></script>
+    <script src="./js/base.js"></script>
+</body>
+
+</html>
